@@ -13,7 +13,17 @@ def test_exception():
 
 
 def test_printer():
-    config = load(os.path.join(os.path.dirname(__file__), '../../gerritstats/config/config.json'))
+    config = {
+        "gerrit": {
+            "host": "https://android.googlesource.com",
+            "pass": "",
+            "port": 80,
+            "query": {
+                "option": ["CURRENT_REVISION"]
+            },
+            "user": ""
+        }
+    }
 
     printer = Printer(config)
     assert printer is not None
