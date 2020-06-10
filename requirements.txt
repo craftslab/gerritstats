@@ -1,0 +1,9 @@
+colorama
+coverage
+coveralls
+openpyxl
+pytest
+requests
+setuptools
+twine
+wheel

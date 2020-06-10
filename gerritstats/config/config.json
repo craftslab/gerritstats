@@ -1,0 +1,11 @@
+{
+  "gerrit": {
+    "host": "localhost",
+    "pass": "pass",
+    "port": 80,
+    "query": {
+      "option": ["CURRENT_REVISION"]
+    },
+    "user": "user"
+  }
+}
