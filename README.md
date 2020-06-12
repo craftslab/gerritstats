@@ -75,9 +75,8 @@ An example of configuration in [config.json](https://github.com/craftslab/gerrit
 ```
 {
   "gerrit": {
-    "host": "localhost",
+    "host": "localhost:80",
     "pass": "pass",
-    "port": 80,
     "query": {
       "option": ["CURRENT_REVISION"]
     },

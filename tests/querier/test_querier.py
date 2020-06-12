@@ -16,9 +16,8 @@ def test_exception():
 def test_querier():
     config = {
         "gerrit": {
-            "host": "https://android.googlesource.com",
+            "host": "https://android-review.googlesource.com",
             "pass": "",
-            "port": 80,
             "query": {
                 "option": ["CURRENT_REVISION"]
             },

@@ -20,12 +20,15 @@ class Gerrit(object):
         self._pass = config['gerrit'].get('pass', '')
         self._query = config['gerrit'].get('query', {'option': ['CURRENT_REVISION']})
         self._user = config['gerrit'].get('user', '')
-        self._url = config['gerrit'].get('host', 'localhost').rstrip('/') + ':' + str(config['gerrit'].get('port', 80))
+        self._url = config['gerrit'].get('host', 'localhost:80')
         if len(self._pass) != 0 and len(self._user) != 0:
             self._url += '/a'
 
     def get(self, _id):
-        response = requests.get(url=self._url+'/changes/'+str(_id)+'/detail', auth=(self._user, self._pass))
+        if len(self._pass) != 0 and len(self._user) != 0:
+            response = requests.get(url=self._url+'/changes/'+str(_id)+'/detail', auth=(self._user, self._pass))
+        else:
+            response = requests.get(url=self._url+'/changes/'+str(_id)+'/detail')
         if response.status_code != requests.codes.ok:
             return None
         return json.loads(response.text.replace(")]}'", ''))
@@ -36,7 +39,10 @@ class Gerrit(object):
             'q': search,
             'start': start
         }
-        response = requests.get(url=self._url+'/changes/', auth=(self._user, self._pass), params=payload)
+        if len(self._pass) != 0 and len(self._user) != 0:
+            response = requests.get(url=self._url+'/changes/', auth=(self._user, self._pass), params=payload)
+        else:
+            response = requests.get(url=self._url+'/changes/', params=payload)
         if response.status_code != requests.codes.ok:
             return None
         return json.loads(response.text.replace(")]}'", ''))

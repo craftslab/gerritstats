@@ -17,7 +17,6 @@ def test_printer():
         "gerrit": {
             "host": "https://android.googlesource.com",
             "pass": "",
-            "port": 80,
             "query": {
                 "option": ["CURRENT_REVISION"]
             },
