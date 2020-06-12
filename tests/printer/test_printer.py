@@ -2,7 +2,6 @@
 
 import os
 
-from gerritstats.main import load
 from gerritstats.printer.printer import Printer, PrinterException
 from gerritstats.proto.proto import Commit
 

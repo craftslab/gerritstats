@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
-
-from gerritstats.main import load
 from gerritstats.gerrit.gerrit import Gerrit, GerritException
 
 

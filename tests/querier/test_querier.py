@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import os
 import pprint
 import requests
 
-from gerritstats.main import load
 from gerritstats.querier.querier import Querier, QuerierException
 
 
