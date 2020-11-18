@@ -13,29 +13,11 @@
 
 ## Requirement
 
-- python (3.7+)
-- pip
-- python-dev
+- python >= 3.7
 
 
 
-## Installation
-
-On Ubuntu / Mint, install *Gerrit Stats* with the following commands:
-
-```bash
-apt update
-apt install python3-dev python3-pip python3-setuptools
-pip install gerritstats
-```
-
-On OS X, install *Gerrit Stats* via [Homebrew](https://brew.sh/) (or via [Linuxbrew](https://linuxbrew.sh/) on Linux):
-
-```
-TBD
-```
-
-On Windows, install *Gerrit Stats* with the following commands:
+## Build
 
 ```
 pip install -U pywin32
@@ -47,7 +29,15 @@ pyinstaller --clean --name gerritstats -F stats.py
 
 
 
-## Updating
+## Installation
+
+```bash
+pip install gerritstats
+```
+
+
+
+## Update
 
 ```bash
 pip install gerritstats --upgrade
@@ -55,18 +45,15 @@ pip install gerritstats --upgrade
 
 
 
-## Running
+## Run
 
 ```bash
-gerritstats \
-    --config-file config.json \
-    --gerrit-query "since:2020-06-01 until:2020-06-02" \
-    --output-file output.json
+gerritstats --config-file config.json --gerrit-query "since:2020-06-01 until:2020-06-02" --output-file output.json
 ```
 
 
 
-## Setting
+## Settings
 
 *Gerrit Stats* parameters can be set in the directory [config](https://github.com/craftslab/gerritstats/blob/master/gerritstats/config).
 
