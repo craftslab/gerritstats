@@ -4,8 +4,8 @@ from gerritstats.gerrit.gerrit import Gerrit, GerritException
 
 
 def test_exception():
-    exception = GerritException('exception')
-    assert str(exception) == 'exception'
+    exception = GerritException("exception")
+    assert str(exception) == "exception"
 
 
 def test_gerrit():
@@ -13,10 +13,8 @@ def test_gerrit():
         "gerrit": {
             "host": "https://android-review.googlesource.com",
             "pass": "",
-            "query": {
-                "option": ["CURRENT_REVISION"]
-            },
-            "user": ""
+            "query": {"option": ["CURRENT_REVISION"]},
+            "user": "",
         }
     }
 
@@ -26,5 +24,5 @@ def test_gerrit():
     buf = gerrit.get(1325676)
     assert buf is not None
 
-    buf = gerrit.query('change:1325676', 0)
+    buf = gerrit.query("change:1325676", 0)
     assert buf is not None

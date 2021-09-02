@@ -1,7 +1,12 @@
+black
+flake8
 colorama
 coverage
 coveralls
+hypothesis
 openpyxl
+mypy
+pre-commit
 pytest
 requests
 setuptools

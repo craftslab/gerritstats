@@ -2,12 +2,13 @@
 
 
 class Commit:
-    AUTHOR = 'author'
-    BRANCH = 'branch'
-    COMMIT = 'commit'
-    DATE = 'date'
-    DELETIONS = 'deletions'
-    INSERTIONS = 'insertions'
-    LABELS = 'labels'
-    MESSAGE = 'message'
-    REPO = 'repo'
+    BRANCH = "branch"
+    COMMIT = "commit"
+    DELETIONS = "deletions"
+    INSERTIONS = "insertions"
+    LABELS = "labels"
+    MESSAGE = "message"
+    OWNER = "owner"
+    REPO = "repo"
+    SUBMITTED = "submitted"
+    UPDATED = "updated"

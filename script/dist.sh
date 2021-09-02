@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pip3 install -Ur requirements.txt
+pip install -Ur requirements.txt
 
 rm -rf buid dist gerritstats.egg-info/
 
-python3 setup.py sdist bdist_wheel
-python3 -m twine upload dist/*
+python setup.py sdist bdist_wheel
+python -m twine upload dist/*
